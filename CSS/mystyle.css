@@ -80,10 +80,11 @@ search-button{
   }
 
 .sidebar a{
-    padding: 6px 8px 6px 16px;
+    padding: 20px 8px 6px 16px;
     text-decoration: none;
     color:white;
     display: block;
+    line-height: 20px;
 
 }
 .sidebar a:hover{
@@ -105,7 +106,6 @@ search-button{
     display: table;
 }
 .post{
-    /* border-radius: 3%; */
     padding: 10px;
     width: 20%;
     border: 10px blue;
@@ -129,8 +129,19 @@ search-button{
     margin: 0px 15% 15%;
     width: 70%;
 }
+.par1{
+    font-size: medium; margin: 0px; font-weight: lighter; text-decoration: none;
+}
+.par2{
+    font-size: small; font-weight: lighter;margin-bottom: 0px;
+}
 p{
     font-size: medium; font-weight: lighter;margin-bottom: 0px;
+}
+.readmore{
+ 
+text-align: right;margin: 0px; color: darkblue;
+text-transform: capitalize;   
 }
 .comment-card{
     width: 100%;
