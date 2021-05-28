@@ -4,14 +4,38 @@
         <title> Blog Post</title>
         <link rel="stylesheet" href="../CSS/mystyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <script>
+            function load_model(){
+                var modal = document.getElementById('id01');
+                modal.style.display= 'block';
+                modal.style.backgroundColor='black';
+            }
+ 
+            function Hide_model(){
+             var modal = document.getElementById('id01');
+                modal.style.display= 'none'; 
+            }
+            function register_model(){
+                var register= document.getElementById('rmodel');
+                register.style.display= 'block';
+                register.style.backgroundColor='black';
+            }
+ 
+            function hideRegister(){
+             var register= document.getElementById('rmodel');
+              register.style.display= 'none';
+            }
+        </script>
+    
     </head>
     <body>
         <div class="header">
-            <a href="#">SignUp</a>
-            <a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>    
-            <a  href="contact.html">Contact</a> 
-            <a  href="about.html">About Us</a>  
-            <a  class="active" href="../index.html">Posts</a>
+            <a onclick="register_model()">SignUp</a>
+            <a  onclick="load_model()" style="width:auto;">Login</a>    
+            <a  href="health.html">Health</a> 
+            <a  href="education.html">Education</a> 
+            <a  href="../index.html">Posts</a>
             <div class="blog-logo"> 
                 <img src="../Images/eddy.JPG" class="logo"> 
             </div>
@@ -92,47 +116,70 @@
          
                      
               </div>
-
-              
-              <div id="id01"class="login-card modal">
-                      
+              <div id="id01"class="login-modal ">
+                <div class="imgcontainer">
+                    <span onclick="Hide_model()" style="color: red; font-size: 20px;">&times;</span>
+                   
+                  </div>
+                  <h1 style="color: white; text-align: center;"> Login Model </h1>    
                 <div  class="">
-    
-                  
-                  <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                   
-                  </div>
-                  <div style="margin-top: 20px;">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" class="txtlogin" required>
+                  <div>
+                    <label for="uname" style="background-color: white; font-size: 20px;"><b>Email</b></label>
+                    <input type="text" placeholder=" Email Here " name="uname" class="txtlogin" required>
               
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" class="txtlogin" required>
+                    <label for="psw" style="background-color: white; font-size: 20px;"><b>Password</b></label>
+                    <input type="password" placeholder=" Password Here" name="psw" class="txtlogin" required>
                   </div>
-                   
-                    
-                      <div >
-                        <button type="submit" style="float: right;">Login</button>
-
-                      </div>
                       <div>
 
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <label style="color: white;">
+                            <input type="checkbox"  name="remember"> Remember me
                           </label>
                       </div>
                  <div style="margin: 30px 40px 10px;">
 
                   
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <button type="button" onclick="Hide_model()" class="cancelbtn">Login</button>
+                 <a href="#" style="background-color: red; margin-left: 10px;">Forget Password</a>
                  </div>
               
                 
               </div>
   
                   </div>
+
+    
+                  <div id="rmodel"class="register_model ">
+                    <div class="imgcontainer">
+                        <span onclick="hideRegister()" style="color: red; font-size: 20px;">&times;</span>
+                       
+                      </div>
+                      <h1 style="color: white; text-align: center;"> Register Model </h1>    
+                    <div  class="">
+                      <div>
+                        <label for="fname" style="background-color: white; font-size: 15px;">FirstName :</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder=" FistName Here " name="uname" class="regtext " required> <br>
+                        
+                        <label for="lname" style="background-color: white; font-size: 20px;"><b>LastName</b></label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder=" LastName Here " name="uname" class="regtext" required><br>
+                      
+                        <label for="email" style="background-color: white; font-size: 20px;"><b>Email</b></label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="text" placeholder=" Email Here " name="uname" class="regtext " required><br>
+                  
+
+                        <label for="psw" style="background-color: white; font-size: 20px;"><b>Password</b></label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" placeholder=" Password Here" name="psw" class="regtext " required><br>
+                      
+                        <label for="cpassowrd" style="background-color: white; font-size: 20px;"><b>Confirm Password</b></label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" placeholder=" Password Here" name="psw" class="regtext " required><br>
+                      
+                    </div>
+                     <div style="margin-top: 10px; margin-left: 30px;">
+                        <button type="button"  class="cancelbtn">Register</button>
+                  
+                  </div>
+      
+                      </div>
 
 
     </body>
