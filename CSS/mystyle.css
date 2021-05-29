@@ -217,6 +217,12 @@ text-transform: capitalize;
         font-size: 15px;
           
     }
+
+    .sidebar a:hover{
+        background-color: blue;
+        transition: none;
+        color: black;
+    }
     
    
 
